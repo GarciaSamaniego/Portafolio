@@ -1,0 +1,90 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 62.5%;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 10rem;
+  background-color: #343434;
+}
+header p {
+  font-size: 5rem;
+  margin-left: 1rem;
+}
+header p .flecha {
+  position: relative;
+  right: 3.5rem;
+  top: 1.5rem;
+}
+header div {
+  margin-right: 1rem;
+}
+
+main {
+  background-color: #1D1D1D;
+}
+main h2 {
+  font-size: 4rem;
+}
+main .Presentacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+main .Presentacion img {
+  margin: 4rem auto;
+}
+main .Presentacion p {
+  font-size: 3rem;
+  margin: 1rem auto;
+}
+main .Presentacion span {
+  color: #2A9D8F;
+}
+main .Presentacion .sobreMi {
+  font-size: 2rem;
+}
+main .Presentacion button {
+  margin-top: 2rem;
+  width: 15rem;
+  height: 5rem;
+  border-radius: 5rem;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #2A9D8F;
+  border-style: none;
+}
+main .Habilidades {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+main .Habilidades .Skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  justify-items: center;
+}
+main .Habilidades .Skills p {
+  font-size: 2rem;
+  text-align: center;
+}
+main .Portafolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}/*# sourceMappingURL=styles.css.map */

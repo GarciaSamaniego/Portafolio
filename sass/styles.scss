@@ -1,0 +1,100 @@
+$primari-color: #1D1D1D;
+$secundary-color: #343434;
+$font: #fff;
+$font-color: #2A9D8F;
+
+@mixin justify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin justify-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $font;
+    font-size: 62.5%;
+}
+
+header {
+    @include justify();
+    justify-content: space-between;
+    width: 100%;
+    height: 10rem;
+    background-color: $secundary-color;
+
+    p {
+        font-size: 5rem;
+        margin-left: 1rem;
+        .flecha {
+            position: relative;
+            right: 3.5rem;
+            top: 1.5rem;
+        }
+    }
+    div {
+        margin-right: 1rem;
+    }
+}
+
+main {
+    background-color: $primari-color;
+
+    h2 {
+        font-size: 4rem
+    }
+    .Presentacion {
+        @include justify-column();
+        width: 80%;
+        margin: 0 auto;
+        img {
+            margin: 4rem auto;
+        }
+        p {
+            font-size: 3rem;
+            margin: 1rem auto;
+        }
+        span {
+            color: $font-color;
+        }
+        .sobreMi {
+            font-size: 2rem;
+        }
+
+        button {
+            margin-top: 2rem;
+            width: 15rem;
+            height: 5rem;
+            border-radius: 5rem;
+            font-size: 2rem;
+            color: $font;
+            background-color: $font-color;
+            border-style: none;
+        }
+    }
+    .Habilidades {
+        @include justify-column();
+        width: 100%;
+        .Skills {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 80%;
+            justify-items: center;
+            p {
+                font-size: 2rem;
+                text-align: center;
+            }
+        }
+    }
+
+    .Portafolio {
+        @include justify-column();
+    }
+}

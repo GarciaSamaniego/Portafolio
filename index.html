@@ -9,12 +9,19 @@
 
   <body>
     <header>
-      <p>SG <img class="flecha" src="src/img/flecha.png" alt=""></p>
-      <div>Menu</div>
+      <p>SG <img class="flecha" src="src/img/flecha.png" alt="" /></p>
+        <div class="menu-content">
+          <img src="src/img/icons8-menu.svg" alt="">
+          <ul>
+            <li><a href="#Presentacion">Inicio</a></li>
+            <li><a href="#Habilidades">Habilidades</a></li>
+            <li><a href="#Portafolio">Portafolio</a></li></a>
+          </ul>
+      </div>
     </header>
 
     <main>
-      <div class="Presentacion">
+      <div class="Presentacion" id="Presentacion">
         <img src="src/img/personalImg.png" alt="" />
         <p>Hola, me llamo Salvador y soy <span>Desarrollador Frontend</span></p>
         <p class="sobreMi">
@@ -26,7 +33,7 @@
         <button>Descargar CV</button>
       </div>
 
-      <div class="Habilidades">
+      <div class="Habilidades" id="Habilidades">
         <h2>Habilidades</h2>
         <div class="Skills">
           <div>
@@ -52,13 +59,17 @@
         </div>
       </div>
 
-      <div class="Portafolio">
+      <div class="Portafolio" id="Portafolio">
         <h2>Portafolio</h2>
         <div>
           <img src="src/img/css.png" alt="" />
         </div>
       </div>
     </main>
-    <!-- <footer></footer> -->
+    <footer class="this">
+      <img src="src/img/css.png" alt="" />
+    </footer>
   </body>
+
+  <script src="index.js"></script>
 </html>

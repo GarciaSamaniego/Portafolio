@@ -1,104 +1,164 @@
-$primari-color: #1D1D1D;
+$primari-color: #1d1d1d;
 $secundary-color: #343434;
 $font: #fff;
-$font-color: #2A9D8F;
+$font-color: #2a9d8f;
 
 @mixin justify {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @mixin justify-column {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: $font;
-    font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $font;
+  font-size: 62.5%;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 header {
-    @include justify();
-    justify-content: space-between;
-    width: 100%;
-    height: 10rem;
-    background-color: $secundary-color;
+  @include justify();
+  justify-content: space-between;
+  width: 100%;
+  height: 10rem;
+  background-color: $secundary-color;
 
-    p {
-        font-size: 5rem;
-        margin-left: 1rem;
-        .flecha {
-            position: relative;
-            right: 3.5rem;
-            top: 1.5rem;
+  p {
+    font-size: 5rem;
+    margin-left: 1rem;
+    text-align: center;
+    .flecha {
+      position: relative;
+      right: 3.5rem;
+      top: 1.5rem;
+    }
+  }
+
+  .menu-content {
+    position: relative;
+    margin-right: 10%;
+
+    img {
+      height: 5rem;
+      width: 5rem;
+      margin-bottom: 0;
+    }
+
+    ul {
+      position: absolute;
+      top: 40px;
+      max-height: 0;
+      overflow: hidden;
+      transition: all .8s;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin: .5rem 0;
+
+        a {
+          text-decoration: none;
+          color: $font;
+          font-size: 1.5rem;
+          padding-left: 4px;
         }
+
+        a:hover {
+          color: $font-color;
+        }
+      }
     }
-    div {
-        margin-right: 1rem;
-    }
+  }
+
+  .menu-content:hover ul, .menu-content ul.show {
+    max-height: 300px;
+  }
 }
 
 main {
-    background-color: $primari-color;
+  background-color: $primari-color;
 
-    h2 {
-        font-size: 4rem
+  h2 {
+    font-size: 4rem;
+  }
+  .Presentacion {
+    @include justify-column();
+    width: 80%;
+    margin: 0 auto;
+    img {
+      margin: 4rem auto;
     }
-    .Presentacion {
-        @include justify-column();
-        width: 80%;
-        margin: 0 auto;
-        img {
-            margin: 4rem auto;
-        }
-        p {
-            font-size: 3rem;
-            margin: 1rem auto;
-        }
-        span {
-            color: $font-color;
-        }
-        .sobreMi {
-            font-size: 2rem;
-        }
-
-        button {
-            margin-top: 2rem;
-            width: 15rem;
-            height: 5rem;
-            border-radius: 5rem;
-            font-size: 2rem;
-            color: $font;
-            background-color: $font-color;
-            border-style: none;
-        }
+    p {
+      font-size: 3rem;
+      margin: 1rem auto;
     }
-    .Habilidades {
-        @include justify-column();
-        width: 100%;
-        .Skills {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            width: 80%;
-            justify-items: center;
-            p {
-                font-size: 2rem;
-                text-align: center;
-            }
-        }
+    span {
+      color: $font-color;
+    }
+    .sobreMi {
+      font-size: 2rem;
     }
 
-    .Portafolio {
-        @include justify-column();
+    button {
+      margin-top: 2rem;
+      width: 15rem;
+      height: 5rem;
+      border-radius: 5rem;
+      font-size: 2rem;
+      color: $font;
+      background-color: $font-color;
+      border-style: none;
     }
+  }
+  .Habilidades {
+    @include justify-column();
+    width: 100%;
+    .Skills {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 80%;
+      justify-items: center;
+      p {
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .Portafolio {
+    @include justify-column();
+  }
+}
+
+footer {
+  background-color: $primari-color;
+}
+
+@media (min-width: 800px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100%;
+    footer {
+      grid-column: 2/3;
+    }
+  }
+
+  header {
+    flex-direction: column;
+    grid-row: 1/3;
+    height: 100%;
+  }
 }

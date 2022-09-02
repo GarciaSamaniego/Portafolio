@@ -22,18 +22,50 @@ header {
 header p {
   font-size: 5rem;
   margin-left: 1rem;
+  text-align: center;
 }
 header p .flecha {
   position: relative;
   right: 3.5rem;
   top: 1.5rem;
 }
-header div {
-  margin-right: 1rem;
+header .menu-content {
+  position: relative;
+  margin-right: 10%;
+}
+header .menu-content img {
+  height: 5rem;
+  width: 5rem;
+  margin-bottom: 0;
+}
+header .menu-content ul {
+  position: absolute;
+  top: 40px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.8s;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header .menu-content ul li {
+  margin: 0.5rem 0;
+}
+header .menu-content ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding-left: 4px;
+}
+header .menu-content ul li a:hover {
+  color: #2a9d8f;
+}
+header .menu-content:hover ul, header .menu-content ul.show {
+  max-height: 300px;
 }
 
 main {
-  background-color: #1D1D1D;
+  background-color: #1d1d1d;
 }
 main h2 {
   font-size: 4rem;
@@ -54,7 +86,7 @@ main .Presentacion p {
   margin: 1rem auto;
 }
 main .Presentacion span {
-  color: #2A9D8F;
+  color: #2a9d8f;
 }
 main .Presentacion .sobreMi {
   font-size: 2rem;
@@ -66,7 +98,7 @@ main .Presentacion button {
   border-radius: 5rem;
   font-size: 2rem;
   color: #fff;
-  background-color: #2A9D8F;
+  background-color: #2a9d8f;
   border-style: none;
 }
 main .Habilidades {
@@ -91,4 +123,24 @@ main .Portafolio {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+footer {
+  background-color: #1d1d1d;
+}
+
+@media (min-width: 800px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100%;
+  }
+  body footer {
+    grid-column: 2/3;
+  }
+  header {
+    flex-direction: column;
+    grid-row: 1/3;
+    height: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */

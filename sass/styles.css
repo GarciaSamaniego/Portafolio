@@ -14,14 +14,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   height: 10rem;
   background-color: #343434;
 }
 header p {
-  font-size: 5rem;
-  margin-left: 1rem;
+  width: 30%;
+  font-size: 4rem;
   text-align: center;
 }
 header p .flecha {
@@ -29,39 +29,24 @@ header p .flecha {
   right: 3.5rem;
   top: 1.5rem;
 }
-header .menu-content {
-  position: relative;
-  margin-right: 10%;
-}
-header .menu-content img {
-  height: 5rem;
-  width: 5rem;
-  margin-bottom: 0;
-}
-header .menu-content ul {
-  position: absolute;
-  top: 40px;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.8s;
+header ul {
+  display: flex;
+  justify-content: space-evenly;
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 65%;
 }
-header .menu-content ul li {
-  margin: 0.5rem 0;
+header ul li {
+  margin: 0 auto;
 }
-header .menu-content ul li a {
+header ul li a {
   text-decoration: none;
   color: #fff;
-  font-size: 1.5rem;
-  padding-left: 4px;
+  font-size: 1.8rem;
 }
-header .menu-content ul li a:hover {
+header ul li a:hover {
   color: #2a9d8f;
-}
-header .menu-content:hover ul, header .menu-content ul.show {
-  max-height: 300px;
 }
 
 main {
@@ -114,9 +99,12 @@ main .Habilidades .Skills {
   width: 80%;
   justify-items: center;
 }
-main .Habilidades .Skills p {
+main .Habilidades .Skills div p {
   font-size: 2rem;
   text-align: center;
+}
+main .Habilidades .Skills div img {
+  height: 8rem;
 }
 main .Portafolio {
   display: flex;
@@ -132,7 +120,7 @@ footer {
 @media (min-width: 800px) {
   body {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     height: 100%;
   }
   body footer {

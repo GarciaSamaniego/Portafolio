@@ -29,14 +29,14 @@ body {
 
 header {
   @include justify();
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   height: 10rem;
   background-color: $secundary-color;
 
   p {
-    font-size: 5rem;
-    margin-left: 1rem;
+    width: 30%;
+    font-size: 4rem;
     text-align: center;
     .flecha {
       position: relative;
@@ -45,45 +45,25 @@ header {
     }
   }
 
-  .menu-content {
-    position: relative;
-    margin-right: 10%;
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 65%;
+    li {
+      margin: 0 auto;
+      a {
+        text-decoration: none;
+        color: $font;
+        font-size: 1.8rem;
+      }
 
-    img {
-      height: 5rem;
-      width: 5rem;
-      margin-bottom: 0;
-    }
-
-    ul {
-      position: absolute;
-      top: 40px;
-      max-height: 0;
-      overflow: hidden;
-      transition: all .8s;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      li {
-        margin: .5rem 0;
-
-        a {
-          text-decoration: none;
-          color: $font;
-          font-size: 1.5rem;
-          padding-left: 4px;
-        }
-
-        a:hover {
-          color: $font-color;
-        }
+      a:hover {
+        color: $font-color;
       }
     }
-  }
-
-  .menu-content:hover ul, .menu-content ul.show {
-    max-height: 300px;
   }
 }
 
@@ -130,9 +110,14 @@ main {
       grid-template-columns: repeat(2, 1fr);
       width: 80%;
       justify-items: center;
-      p {
-        font-size: 2rem;
-        text-align: center;
+      div {
+        p {
+          font-size: 2rem;
+          text-align: center;
+        }
+        img {
+          height: 8rem;
+        }
       }
     }
   }
@@ -149,7 +134,7 @@ footer {
 @media (min-width: 800px) {
   body {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     height: 100%;
     footer {
       grid-column: 2/3;

@@ -107,14 +107,46 @@ main .Habilidades .Skills div img {
   height: 8rem;
 }
 main .Portafolio {
+  padding-bottom: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+main .Portafolio div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .Portafolio p {
+  margin: 0.5rem;
+  font-size: 3rem;
+  text-align: center;
+}
+main .Portafolio p a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #2a9d8f;
+}
+main .Portafolio img {
+  height: 15rem;
+}
 
 footer {
-  background-color: #1d1d1d;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #343434;
+}
+footer img {
+  height: 4rem;
+}
+footer a {
+  color: #fff;
+  font-size: 2rem;
 }
 
 @media (min-width: 800px) {

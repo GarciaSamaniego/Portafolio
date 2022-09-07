@@ -123,12 +123,43 @@ main {
   }
 
   .Portafolio {
+    padding-bottom: 3rem;
     @include justify-column();
+
+    div {
+      @include justify-column();
+    }
+
+    p {
+      margin: .5rem;
+      font-size: 3rem;
+      text-align: center;
+      a {
+        font-size: 2rem;
+        text-decoration: none;
+        color: $font-color;
+      }
+    }
+    img {
+      height: 15rem;
+      
+    }
   }
 }
 
 footer {
-  background-color: $primari-color;
+  height: 8rem;
+  @include justify();
+  justify-content: space-evenly;
+  background-color: $secundary-color;
+
+  img {
+    height: 4rem;
+  }
+  a {
+    color: $font;
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 800px) {

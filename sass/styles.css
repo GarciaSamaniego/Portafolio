@@ -1,9 +1,14 @@
+h2 {
+  font-weight: bold;
+}
+
 html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: #fff;
   font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -162,5 +167,23 @@ footer a {
     flex-direction: column;
     grid-row: 1/3;
     height: 100%;
+  }
+  header p {
+    position: fixed;
+    top: 1%;
+    margin: 4rem;
+    font-size: 8rem;
+  }
+  header ul {
+    flex-direction: column;
+    position: fixed;
+    top: 30%;
+    width: auto;
+  }
+  header ul li {
+    margin: 4rem auto;
+  }
+  header ul li a {
+    font-size: 3rem;
   }
 }/*# sourceMappingURL=styles.css.map */

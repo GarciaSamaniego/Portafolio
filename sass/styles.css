@@ -69,7 +69,9 @@ main .Presentacion {
   margin: 0 auto;
 }
 main .Presentacion img {
+  width: 20rem;
   margin: 4rem auto;
+  border-radius: 30%;
 }
 main .Presentacion p {
   font-size: 3rem;
@@ -81,15 +83,17 @@ main .Presentacion span {
 main .Presentacion .sobreMi {
   font-size: 2rem;
 }
-main .Presentacion button {
+main .Presentacion .button {
   margin-top: 2rem;
   width: 15rem;
-  height: 5rem;
+  padding: 0.5rem;
   border-radius: 5rem;
   font-size: 2rem;
   color: #fff;
   background-color: #2a9d8f;
   border-style: none;
+  text-align: center;
+  text-decoration: none;
 }
 main .Habilidades {
   display: flex;

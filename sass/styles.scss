@@ -84,7 +84,9 @@ main {
     width: 80%;
     margin: 0 auto;
     img {
+      width: 20rem;
       margin: 4rem auto;
+      border-radius: 30%;
     }
     p {
       font-size: 3rem;
@@ -97,15 +99,17 @@ main {
       font-size: 2rem;
     }
 
-    button {
+    .button {
       margin-top: 2rem;
       width: 15rem;
-      height: 5rem;
+      padding: .5rem;
       border-radius: 5rem;
       font-size: 2rem;
       color: $font;
       background-color: $font-color;
       border-style: none;
+      text-align: center;
+      text-decoration: none;
     }
   }
   .Habilidades {
